@@ -117,6 +117,7 @@ public class Lexer {
         private int value;
         protected NumToken(int line, int v) {
             super(line);
+            value = v;
         }
 
         public boolean isNumber() {
@@ -141,6 +142,10 @@ public class Lexer {
 
         public boolean isIdentifier() {
             return true;
+        }
+
+        public String getText() {
+            return text;
         }
     }
     protected static class StrToken extends Token {
