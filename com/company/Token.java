@@ -1,3 +1,5 @@
+package com.company;
+
 public class Token {
     public static final Token EOF = new Token(-1) {};
     public static final String EOL = "\\n";
@@ -22,5 +24,13 @@ public class Token {
 
     public boolean isString() {
         return false;
+    }
+
+    public int getNumber() {
+        throw new StoneException("not number token");
+    }
+
+    public String getText() {
+        return "";
     }
 }

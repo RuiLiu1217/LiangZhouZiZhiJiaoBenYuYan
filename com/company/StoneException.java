@@ -1,2 +1,13 @@
-package com.company;public class StoneException {
+package com.company;
+// import stone.ast.ASTree;
+
+public class StoneException extends RuntimeException {
+    public StoneException(String m) {
+        super(m);
+    }
+
+//    public StoneException(String m, ASTree t) {
+//        super(m + " " + t.location());
+//    }
+
 }
